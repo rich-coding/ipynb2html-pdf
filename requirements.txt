@@ -1,5 +1,0 @@
-nbconvert
-pyppeteer
-nbformat
-# Optional: playwright may be required for newer nbconvert versions
-# playwright

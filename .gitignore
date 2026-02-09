@@ -1,2 +1,23 @@
 # Ignore the '.ipynb2html' directory
 .ipynb2html/
+
+# Ignore .agent directory
+.agent/
+
+# Ignore .venv directory
+.venv/
+
+# Ignore .eggs directory
+.eggs/
+
+# Ignore .vscode directory
+.vscode/
+
+# Ignore pytest cache
+.pytest_cache
+
+# Ignore pycache
+__pycache__
+
+# Ignore ruff cache
+.ruff_cache

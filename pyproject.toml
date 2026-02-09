@@ -1,0 +1,41 @@
+[project]
+name = "ipynb2html-pdf"
+version = "0.1.0"
+description = "Professional Jupyter Notebook to HTML/PDF converter"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "nbconvert>=7.0.0",
+    "nbformat>=5.0.0",
+    "pre-commit>=4.3.0",
+    "pyppeteer>=2.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+ipynb2html = "ipynb2html.cli:main"
+ipynb2html-gui = "ipynb2html.gui:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ipynb2html"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "A", "C4", "RET", "SIM", "ARG", "PTH"]
+ignore = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
